@@ -1,0 +1,142 @@
+$firstColor : #5BBA6F;//light green//
+$secondColor : #3FA34D;//A bit darker//
+$thirdColor : #2A9134;//Meduim green//
+$fourthColor : #137547;//A bit darker//
+$fifthColor : #054A29;//Dark green//
+//making the grid for the pictures
+
+#container{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px 160px 145px 145px 167px 101px 265px 150px;
+  text-align: center;
+  //Making the headings in black//
+  h1{
+    color: black;
+  }
+  label{
+    font-size: 40px;
+    padding: 20px;
+    margin-top: 10px;
+  }
+  input{
+    width: 330px;
+    height: 50px;
+    font-size: 20px;
+    margin-top: 20px;
+    border-radius: 12px;
+    color: black;
+    background-color: $firstColor;
+    border: solid 2px $firstColor;
+  }
+
+  select{
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 12px;
+    background-color: $firstColor;
+    border: solid 2px $firstColor;
+  }
+  textarea{
+    font-size: 20px;
+    border-radius: 12px;
+    background-color: $firstColor;
+    border: solid 2px $firstColor;
+  }
+  button{
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    background-color: $fifthColor;
+    border-radius: 12px;
+  }
+}
+  //Adding the background image//
+body {
+  background-image: url("background.jpg");
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Teko', sans-serif; }
+
+  //styling the fieldset//
+  fieldset{
+    border: solid 2px $fifthColor;
+    padding-bottom: 50px;
+    background-color: $firstColor;
+  }
+
+  //styling the links and making it sticky//
+  ul {
+    text-align: center;
+    margin-top: 30px;
+    position: sticky;
+    top: 2%; }
+  //changing the color of the links//
+  a {
+    color: black;
+    font-size: 30px;
+    text-decoration: none; }
+  //editting the links//
+  li {
+    display: inline;
+    padding: 20px;
+    background-color: $secondColor;
+    border-radius: 12px;
+    color: #054A29; }
+  //addimng a hover background color//
+  li:hover {
+    background-color: $fifthColor; }
+    //editting the main header//
+  h1{
+    color: $fifthColor;
+    font-size: 100px;
+    text-align: center;
+    }
+    footer{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      background-color: $firstColor;
+      border-radius: 12px;
+      border: solid 2px black;
+    }
+    //making it responsive for smart phones//
+    @media screen and (max-width: 480px) {
+      body{
+        text-align: center;
+      }
+      #container{
+        display: grid;
+        grid-template-columns:1fr;
+        grid-template-rows: 268px 97px 176px 178px 219px 49px 177px 92px;}
+
+      li{
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+          width: 200px;
+          height: 30px;
+          margin-left: 15%;
+        }
+        //aligning it so that its in the center//
+        input,select{
+          margin-left: 15%;
+        }
+        h1{
+          font-size: 50px;
+        }
+        button{
+          margin-left: 34%;
+        }
+        label{
+          color: white;
+        }
+        section{
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px;
+        }
+      }

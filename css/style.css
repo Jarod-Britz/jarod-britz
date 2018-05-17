@@ -1,25 +1,36 @@
+@keyframes transition {
+  0% {
+    opacity: 0.5; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0.5; } }
 body {
   background-image: url("background.jpg");
   background-repeat: no-repeat;
   background-position: center 0;
   background-size: cover;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  font-family: 'Teko', sans-serif; }
 
 fieldset {
   border: solid 2px #054A29;
   padding-bottom: 50px;
-  background-color: #5BBA6F; }
+  background-color: #5BBA6F;
+  color: #054A29; }
 
 #container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  margin: 0 10% 0 10%; }
+  grid-template-rows: 595px 701px 598px 592px;
+  margin: 40px 10% 31px 15%;
+  grid-gap: 30px; }
   #container img {
     width: 500px;
     height: 400px;
     border-radius: 20%;
-    margin-left: 8%; }
+    margin-left: 8%;
+    border: solid 2px black; }
   #container section {
     display: grid;
     grid-template-columns: 1fr;
@@ -30,29 +41,34 @@ fieldset {
     border: solid 2px black;
     border-radius: 10%;
     background-color: #5BBA6F;
-    padding-top: 50px; }
+    padding-top: 10%; }
   #container h3 {
-    font-size: 30px;
-    color: white; }
+    font-size: 40px;
+    color: black; }
   #container p {
     margin-top: 17%; }
 
-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  text-align: center; }
-  section h2 {
-    font-size: 30px;
-    color: white; }
-  section img {
-    width: 250px;
-    height: 150px;
-    border-radius: 12px; }
+.dropdown {
+  text-align: left;
+  position: sticky;
+  top: 6%;
+  left: 5%; }
+  .dropdown select {
+    background-color: black;
+    padding: 10px;
+    border-radius: 12px;
+    color: white;
+    font-size: 20px; }
+
+img {
+  width: 250px;
+  height: 150px;
+  border-radius: 12px;
+  border: solid 2px black; }
 
 h1 {
   color: #054A29;
-  font-size: 70px;
+  font-size: 100px;
   text-align: center; }
 
 h2 {
@@ -67,7 +83,7 @@ ul {
   top: 2%; }
 
 a {
-  color: white;
+  color: black;
   font-size: 30px;
   text-decoration: none; }
 
@@ -76,7 +92,11 @@ li {
   padding: 20px;
   background-color: #3FA34D;
   border-radius: 12px;
-  color: #054A29; }
+  color: #054A29;
+  opacity: 0.5;
+  animation-name: transition;
+  animation-duration: 2s;
+  animation-iteration-count: infinite; }
 
 li:hover {
   background-color: #054A29; }
@@ -84,6 +104,79 @@ li:hover {
 p {
   font-size: 20px;
   color: black;
+  margin-left: 2%; }
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  background-color: #5BBA6F;
+  border-radius: 12px;
+  border: solid 2px black;
   text-align: center; }
+
+/* Making it responsive for large desktops */
+/* Making it responsive for the tablet */
+@media screen and (max-width: 960px) {
+  body {
+    text-align: center; }
+
+  header {
+    width: 100%; }
+
+  #container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    margin: 0 10% 0 10%; }
+    #container img {
+      width: 250px;
+      height: 150px;
+      border-radius: 12px;
+      margin-left: 8%;
+      border: solid 2px black; } }
+/* Making it responsive for the smart phone */
+@media screen and (max-width: 480px) {
+  body {
+    text-align: center; }
+
+  #container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 485px 667px 809px 408px 468px 291px 309px 463px; }
+    #container img {
+      width: 300px;
+      height: 250px; }
+    #container p {
+      margin-top: 0; }
+    #container article {
+      padding-top: 10%; }
+    #container h3 {
+      color: white; }
+
+  section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    text-align: center; }
+    section h2 {
+      font-size: 30px;
+      color: white; }
+    section img {
+      width: 250px;
+      height: 150px;
+      border-radius: 12px;
+      border: solid 2px black; }
+
+  li {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 200px;
+    height: 30px;
+    margin-left: 15%; }
+
+  h1 {
+    font-size: 50px; } }
 
 /*# sourceMappingURL=style.css.map */

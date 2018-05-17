@@ -4,49 +4,47 @@
     <meta charset="utf-8">
     <title>Outdoor Adventures</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Teko:500" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <fieldset>
-      <h1>OUTDOOR ADVENTURES</h1>
-    </fieldset>
+
+      <fieldset>
+        <h1>OUTDOOR ADVENTURES</h1>
+      </fieldset>
+
 
 
       <ul>
         <li><a href="#">HOME</a></li>
-        <li><a href="galary.html">GALLERY</a></li>
+        <li><a href="gallery.html">GALLERY</a></li>
         <li><a href="contact.html">CONTACT</a></li>
       </ul>
 
+      <br>
+      <br>
 
     <h2>CAPE TOWN</h2>
-    <section>
-      <figure>
-        <h2><a href="#hiking">HIKING</a></h2>
-        <img src="images/hiking.jpg" alt="hiking">
-      </figure>
-      <figure>
-        <h2><a href="#rock_climbing">ROCK CLIMBING</a></h2>
-        <img src="images/rock_climbing.jpg" alt="rock climbing">
-      </figure>
-      <figure>
-        <h2><a href="#camping">CAMPING</a></h2>
-        <img src="images/camping.jpg" alt="camping">
-      </figure>
-      <figure>
-        <h2><a href="#fishing">FISHING</a></h2>
-        <img src="images/fishing.jpg" alt="fishing">
-      </figure>
+    <section class="dropdown">
+      <select onchange="location = this.options[this.selectedIndex].value;">
+        <option>Please select</option>
+        <option value="#hiking">HIKING</option>
+        <option value="#rock_climbing">ROCK CLIMBING</option>
+        <option value="#camping">CAMPING</option>
+        <option         value="#fishing">FISHING</option>
+      </select>​
     </section>
+
 
     <hr>
     <div id="container">
 
       <section>
         <h3 id="hiking">HIKING</h3>
-        <img src="images/hiking.jpg" alt="hiking">
+        <img src="images/hiking/hiking.jpg" alt="hiking">
       </section>
 
-      <article>
+      <article class="">
         <p>Towering 1086 meters over Cape Town, and around 500 million years in the making, Table Mountain is a playground for nature lovers and outdoor enthusiasts alike. Once an island, now boasting more plant species per square kilometer than a tropical jungle, this flat-topped monolith begs exploration. Trails run the length and breadth of the mountain, offering exceptional hiking for all levels of experience and fitness. Whether you’re looking for adventure or solitude, nature or views, a hike up Table Mountain is not to be missed.<br>
 
         A passion for nature and mountains coupled with a commitment to service excellence lies at the heartbeat of what we do, ensuring you get the ultimate mountain experience. We pride ourselves on being flexible, competent, attentive and enthusiastic. As qualified and highly experienced mountain guides with a sound knowledge of the environment, we respect nature and never skimp on safety. We offer half- and full-day hikes and climbs tailored to your needs and interests, from leisurely strolls on Table Mountain’s summit to adventure ascents off the beaten track.</p>
@@ -62,14 +60,14 @@
 
       <section>
         <h3 id="rock_climbing">ROCK CLIMBING</h3>
-        <img src="images/rock_climbing.jpg" alt="rock climbing">
+        <img src="images/rock_climbing/rock_climbing.jpg" alt="rock climbing">
       </section>
 
 
 
       <section>
         <h3 id="camping">CAMPING</h3>
-        <img src="images/camping.jpg" alt="camping">
+        <img src="images/camping/camping.jpg" alt="camping">
       </section>
 
       <article class="">
@@ -84,11 +82,13 @@
 
       <section>
         <h3 id="fishing">FISHING</h3>
-        <img src="images/fishing.jpg" alt="fishing">
+        <img src="images/fishing/fishing.jpg" alt="fishing">
       </section>
     </div>
-    <footer>
+    <br><br>
 
+    <footer>
+      <p>By Jarod Britz</p>
     </footer>
   </body>
 </html>
