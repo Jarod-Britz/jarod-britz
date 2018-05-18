@@ -4,6 +4,40 @@ $thirdColor : #2A9134;//Meduim green//
 $fourthColor : #137547;//A bit darker//
 $fifthColor : #054A29;//Dark green//
 //making the grid for the pictures
+//Making a mixin for the links//
+@mixin links{
+  display: inline;
+  padding: 20px;
+  background-color: $secondColor;
+  border-radius: 12px;
+  color: $fifthColor;
+  opacity: 0.5;
+  animation-name: transition;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+//making the home, gallery and contact links flicker//
+@keyframes transition{
+  0%{
+    opacity: 0.5;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0.5;
+  }
+}
+//Styling the the top heading//
+.inset-text-effect{
+  border: none;
+  font: normal 70px "Aladin", Helvetica, sans-serif;
+  color: rgba(48,48,48,1);
+  text-align: center;
+  text-shadow: 1px 1px 0 rgba(140,140,140,0.6) , -1px -1px 1px rgba(0,0,0,0.67) ;
+}
+//adding grids//
 #container{
   display: grid;
   grid-template-columns: 1fr;
@@ -14,7 +48,7 @@ $fifthColor : #054A29;//Dark green//
   }
 
 }
-//adding the image background//
+//Adding the background image so that it doesn't move when you scroll down//
 body{
   background-image: url("background.jpg");
   background-repeat: no-repeat;
@@ -26,7 +60,6 @@ body{
 //styling the fieldset//
 fieldset{
   border: solid 2px $fifthColor;
-  padding-bottom: 50px;
   background-color: $firstColor;
 }
 //styling the links and making it sticky//
@@ -42,11 +75,9 @@ a {
   text-decoration: none; }
 //editting the links//
 li {
-  display: inline;
-  padding: 20px;
-  background-color: #3FA34D;
-  border-radius: 12px;
-  color: #054A29; }
+  @include links;
+
+  }
 //addimng a hover background color//
 li:hover {
   background-color: #054A29; }
@@ -56,12 +87,12 @@ li:hover {
     font-size: 100px;
     text-align: center;
   }
-
+  //making a grid for all the sections for the images//
   section{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 1fr;
-
+    //changing the image sizes//
     img{
       width: 250px;
       height: 190px;
@@ -70,6 +101,7 @@ li:hover {
       margin-left: 7%;
     }
   }
+  //styling the footer//
   footer{
     display: grid;
     grid-template-columns: 1fr;
@@ -78,45 +110,96 @@ li:hover {
     border-radius: 12px;
     border: solid 2px black;
     text-align: center;
-    font-size: 20px;
+  }
+  //making it responsive for a tablet device//
+  @media screen and (max-width:960px) and (min-width:479px){
+    fieldset{
+      width: 100%;
+    }
+    //changing the grids//
+    #container{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 219px 220px 426px 220px 426px 220px 426px 220px;
+      //Making the headings in black//
+      h1{
+        text-align: center;
+        color: black;
+        font-size: 80px;
+      }
+      //changing the links//
+    }
+    li{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        width: 200px;
+        height: 30px;
+        margin-left: 39%;
+    }
+    //changing the ammount of rows//
+    section{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(2, 1fr);
+      width: 100%;
+      //changing image sizes//
+      img{
+          width: 250px;
+          height: 150px;
+          border-radius: 12px;
+          border: solid 2px black;
+          margin-left: 30%;
+      }
+    }
+    footer{
+      width: 110%;
+    }
   }
 //making it responsive for smart phones//
 @media screen and (max-width: 480px) {
+  fieldset{
+    width: 100%;
+  }
   body{
     text-align: center;
   }
+  //changing the heading size//
   h1 {
     font-size: 50px;
-   }
-   #container{
+  }
+  //changing the container//
+  #container{
     display: grid;
     grid-template-columns:1fr;
     grid-template-rows: 1fr;
-
+    //changing the heading colour in the container//
     h1{
       color: white;
     }
-
-      section{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 1fr);
-        width: 100%;
-        img{
-            width: 250px;
-            height: 150px;
-            border-radius: 12px;
-            border: solid 2px black;
-            margin-left: 19%;
-          }
+    //editting the sections//
+    section{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 1fr);
+      width: 100%;
+      //changing image sizes//
+      img{
+          width: 250px;
+          height: 150px;
+          border-radius: 12px;
+          border: solid 2px black;
+          margin-left: 19%;
       }
-      }
-      li{
-          display: grid;
-          grid-template-columns: 1fr;
-          grid-template-rows: 1fr 1fr 1fr;
-          width: 200px;
-          height: 30px;
-          margin-left: 12%;
-        }
+    }
+  }
+  //changing the link display//
+  li{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 200px;
+    height: 30px;
+    margin-left: 12%;
+  }
 }

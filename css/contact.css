@@ -1,3 +1,17 @@
+@keyframes transition {
+  0% {
+    opacity: 0.5; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0.5; } }
+.inset-text-effect {
+  border: none;
+  font: normal 70px "Aladin", Helvetica, sans-serif;
+  color: #303030;
+  text-align: center;
+  text-shadow: 1px 1px 0 rgba(140, 140, 140, 0.6), -1px -1px 1px rgba(0, 0, 0, 0.67); }
+
 #container {
   display: grid;
   grid-template-columns: 1fr;
@@ -46,6 +60,9 @@ body {
   font-family: 'Teko', sans-serif; }
 
 fieldset {
+  width: 100%; }
+
+fieldset {
   border: solid 2px #054A29;
   padding-bottom: 50px;
   background-color: #5BBA6F; }
@@ -66,7 +83,11 @@ li {
   padding: 20px;
   background-color: #3FA34D;
   border-radius: 12px;
-  color: #054A29; }
+  color: #054A29;
+  opacity: 0.5;
+  animation-name: transition;
+  animation-duration: 2s;
+  animation-iteration-count: infinite; }
 
 li:hover {
   background-color: #054A29; }
@@ -82,11 +103,64 @@ footer {
   grid-template-rows: 1fr;
   background-color: #5BBA6F;
   border-radius: 12px;
-  border: solid 2px black; }
+  border: solid 2px black;
+  text-align: center; }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 960px) and (min-width: 479px) {
+  fieldset {
+    width: 100%; }
+
+  #container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    text-align: center; }
+    #container li {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      width: 200px;
+      height: 30px;
+      margin-left: 35%; }
+    #container h1 {
+      color: black; }
+    #container label {
+      font-size: 20px;
+      padding: 20px;
+      margin-top: 10px; }
+    #container input {
+      width: 330px;
+      height: 50px;
+      font-size: 20px;
+      margin-top: 20px;
+      border-radius: 12px;
+      color: black;
+      background-color: #5BBA6F;
+      border: solid 2px #5BBA6F; }
+    #container select {
+      width: 300px;
+      height: 50px;
+      font-size: 20px;
+      border-radius: 12px;
+      background-color: #5BBA6F;
+      border: solid 2px #5BBA6F; }
+    #container textarea {
+      font-size: 20px;
+      border-radius: 12px;
+      background-color: #5BBA6F;
+      border: solid 2px #5BBA6F; }
+    #container button {
+      width: 150px;
+      height: 50px;
+      font-size: 20px;
+      background-color: #054A29;
+      border-radius: 12px; } }
+@media screen and (max-width: 480px) and (min-width: 1px) {
   body {
     text-align: center; }
+
+  fieldset {
+    width: 100%; }
 
   #container {
     display: grid;
@@ -96,7 +170,7 @@ footer {
   li {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     width: 200px;
     height: 30px;
     margin-left: 15%; }

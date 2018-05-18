@@ -5,6 +5,13 @@
     opacity: 1; }
   100% {
     opacity: 0.5; } }
+.inset-text-effect {
+  border: none;
+  font: normal 70px "Aladin", Helvetica, sans-serif;
+  color: #303030;
+  text-align: center;
+  text-shadow: 1px 1px 0 rgba(140, 140, 140, 0.6), -1px -1px 1px rgba(0, 0, 0, 0.67); }
+
 body {
   background-image: url("background.jpg");
   background-repeat: no-repeat;
@@ -115,26 +122,62 @@ footer {
   border: solid 2px black;
   text-align: center; }
 
-/* Making it responsive for large desktops */
-/* Making it responsive for the tablet */
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 960px) and (min-width: 479px) {
+  fieldset {
+    width: 100%; }
+
   body {
     text-align: center; }
 
-  header {
-    width: 100%; }
-
   #container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    margin: 0 10% 0 10%; }
+    grid-template-columns: 700px;
+    grid-template-rows: 580px 501px 564px 497px 636px 289px 257px 559px; }
     #container img {
+      width: 400px;
+      height: 350px;
+      margin-left: 22%; }
+    #container p {
+      font-size: 20px;
+      margin-top: 0; }
+    #container article {
+      padding-top: 10%; }
+    #container h3 {
+      color: white;
+      font-size: 50px; }
+
+  section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    text-align: center; }
+    section h2 {
+      font-size: 30px;
+      color: white; }
+    section img {
       width: 250px;
       height: 150px;
       border-radius: 12px;
-      margin-left: 8%;
-      border: solid 2px black; } }
+      border: solid 2px black; }
+
+  li {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 200px;
+    height: 30px;
+    margin-left: 34%; }
+
+  h1 {
+    font-size: 80px; }
+
+  h2 {
+    font-size: 72px; }
+
+  select {
+    font-size: 20px;
+    width: 200px;
+    margin-left: 1%; } }
 /* Making it responsive for the smart phone */
 @media screen and (max-width: 480px) {
   body {

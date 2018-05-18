@@ -4,7 +4,39 @@ $thirdColor : #2A9134;//Meduim green//
 $fourthColor : #137547;//A bit darker//
 $fifthColor : #054A29;//Dark green//
 //making the grid for the pictures
+@mixin links{
+  display: inline;
+  padding: 20px;
+  background-color: $secondColor;
+  border-radius: 12px;
+  color: $fifthColor;
+  opacity: 0.5;
+  animation-name: transition;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
 
+//making the home, gallery and contact links flicker//
+@keyframes transition{
+  0%{
+    opacity: 0.5;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0.5;
+  }
+}
+//Styling the the top heading//
+.inset-text-effect{
+  border: none;
+  font: normal 70px "Aladin", Helvetica, sans-serif;
+  color: rgba(48,48,48,1);
+  text-align: center;
+  text-shadow: 1px 1px 0 rgba(140,140,140,0.6) , -1px -1px 1px rgba(0,0,0,0.67) ;
+}
+//container for the form//
 #container{
   display: grid;
   grid-template-columns: 1fr;
@@ -14,11 +46,13 @@ $fifthColor : #054A29;//Dark green//
   h1{
     color: black;
   }
+  //styling the labels
   label{
     font-size: 40px;
     padding: 20px;
     margin-top: 10px;
   }
+  //styling the inputs//
   input{
     width: 330px;
     height: 50px;
@@ -29,7 +63,7 @@ $fifthColor : #054A29;//Dark green//
     background-color: $firstColor;
     border: solid 2px $firstColor;
   }
-
+  //styling the dropdown box//
   select{
     width: 300px;
     height: 50px;
@@ -37,13 +71,14 @@ $fifthColor : #054A29;//Dark green//
     border-radius: 12px;
     background-color: $firstColor;
     border: solid 2px $firstColor;
-  }
+  }//styling the textarea//
   textarea{
     font-size: 20px;
     border-radius: 12px;
     background-color: $firstColor;
     border: solid 2px $firstColor;
   }
+  //styling the button//
   button{
     width: 150px;
     height: 50px;
@@ -59,84 +94,166 @@ body {
   background-position: center 0;
   background-size: cover;
   background-attachment: fixed;
-  font-family: 'Teko', sans-serif; }
+  font-family: 'Teko', sans-serif;
+}
+fieldset{
+  width: 100%;
+}
 
-  //styling the fieldset//
+//styling the fieldset//
+fieldset{
+  border: solid 2px $fifthColor;
+  padding-bottom: 50px;
+  background-color: $firstColor;
+}
+
+//styling the links and making it sticky//
+ul {
+  text-align: center;
+  margin-top: 30px;
+  position: sticky;
+  top: 2%; }
+//changing the color of the links//
+a {
+  color: black;
+  font-size: 30px;
+  text-decoration: none; }
+//editting the links//
+li {
+  @include links; }
+//addimng a hover background color//
+li:hover {
+  background-color: $fifthColor;
+}
+//editting the main header//
+h1{
+  color: $fifthColor;
+  font-size: 100px;
+  text-align: center;
+}
+//editting the footer//
+footer{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  background-color: #5BBA6F;
+  border-radius: 12px;
+  border: solid 2px black;
+  text-align: center;
+}
+
+//making it responsive for tablets//
+@media screen and (max-width: 960px) and (min-width:479px){
+  //making the fieldset fit to the screen//
   fieldset{
-    border: solid 2px $fifthColor;
-    padding-bottom: 50px;
-    background-color: $firstColor;
+    width: 100%;
   }
-
-  //styling the links and making it sticky//
-  ul {
+  //changing the container columns//
+  #container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     text-align: center;
-    margin-top: 30px;
-    position: sticky;
-    top: 2%; }
-  //changing the color of the links//
-  a {
-    color: black;
-    font-size: 30px;
-    text-decoration: none; }
-  //editting the links//
-  li {
-    display: inline;
-    padding: 20px;
-    background-color: $secondColor;
-    border-radius: 12px;
-    color: #054A29; }
-  //addimng a hover background color//
-  li:hover {
-    background-color: $fifthColor; }
-    //editting the main header//
-  h1{
-    color: $fifthColor;
-    font-size: 100px;
-    text-align: center;
-    }
-    footer{
+    //changing the display of the links//
+    li{
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr;
-      background-color: $firstColor;
-      border-radius: 12px;
-      border: solid 2px black;
+      grid-template-rows: 1fr 1fr 1fr;
+      width: 200px;
+      height: 30px;
+      margin-left: 35%;
     }
-    //making it responsive for smart phones//
-    @media screen and (max-width: 480px) {
-      body{
-        text-align: center;
-      }
-      #container{
-        display: grid;
-        grid-template-columns:1fr;
-        grid-template-rows: 268px 97px 176px 178px 219px 49px 177px 92px;}
+    //Making the headings in black//
+    h1{
+      color: black;
+    }
+    //changing the heading sizes//
+    label{
+      font-size: 20px;
+      padding: 20px;
+      margin-top: 10px;
+    }
+    //changing the input//
+    input{
+      width: 330px;
+      height: 50px;
+      font-size: 20px;
+      margin-top: 20px;
+      border-radius: 12px;
+      color: black;
+      background-color: $firstColor;
+      border: solid 2px $firstColor;
+    }
+    //changing the dropdown box//
+    select{
+      width: 300px;
+      height: 50px;
+      font-size: 20px;
+      border-radius: 12px;
+      background-color: $firstColor;
+      border: solid 2px $firstColor;
+    }
+    //changing the size and background-color of the textarea//
+    textarea{
+      font-size: 20px;
+      border-radius: 12px;
+      background-color: $firstColor;
+      border: solid 2px $firstColor;
+    }
+    //styling the button//
+    button{
+      width: 150px;
+      height: 50px;
+      font-size: 20px;
+      background-color: $fifthColor;
+      border-radius: 12px;
+    }
+  }
+}
+//making it responsive for smart phones//
+@media screen and (max-width: 480px) and (min-width:1px){
+  body{
+    text-align: center;
+  }
+  //making the fieldset fit to the page//
+  fieldset{
+    width: 100%;
+  }
+  //styling the sizes of the rows//
+  #container{
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-rows: 268px 97px 176px 178px 219px 49px 177px 92px;
+  }
+  //changing displays of links//
+  li{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 200px;
+    height: 30px;
+    margin-left: 15%;
+  }
+  //aligning it so that its in the center//
+  input,select{
+    margin-left: 15%;
+  }
+  //changing the top heading//
+  h1{
+    font-size: 50px;
+  }
+  //moving the button the middle//
+  button{
+    margin-left: 34%;
+  }
+  //changing the label colour//
+  label{
+    color: white;
+  }
 
-      li{
-          display: grid;
-          grid-template-columns: 1fr;
-          grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-          width: 200px;
-          height: 30px;
-          margin-left: 15%;
-        }
-        //aligning it so that its in the center//
-        input,select{
-          margin-left: 15%;
-        }
-        h1{
-          font-size: 50px;
-        }
-        button{
-          margin-left: 34%;
-        }
-        label{
-          color: white;
-        }
-        section{
-          display: grid;
-          grid-template-columns: 1fr;
-          grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px;
-        }
-      }
+  section{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px;
+  }
+}

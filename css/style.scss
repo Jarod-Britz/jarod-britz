@@ -22,18 +22,27 @@ $fifthColor : #054A29;//Dark green//
   animation-duration: 2s;
   animation-iteration-count: infinite;
 }
-
+//making the home, gallery and contact links flicker//
 @keyframes transition{
-0%{
-opacity: 0.5;
+  0%{
+    opacity: 0.5;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0.5;
+  }
 }
-50%{
-opacity: 1;
+//Styling the the top heading//
+.inset-text-effect{
+  border: none;
+  font: normal 70px "Aladin", Helvetica, sans-serif;
+  color: rgba(48,48,48,1);
+  text-align: center;
+  text-shadow: 1px 1px 0 rgba(140,140,140,0.6) , -1px -1px 1px rgba(0,0,0,0.67) ;
 }
-100%{
-opacity: 0.5;
-}
-}
+
 //Adding the background image so that it doesn't move when you scroll down//
 body{
   background-image: url("background.jpg");
@@ -59,7 +68,6 @@ fieldset{
   grid-template-rows: 595px 701px 598px 592px;
   margin: 40px 10% 31px 15%;
   grid-gap: 30px;
-
 
 //Styling the images in the container//
   img{
@@ -93,29 +101,29 @@ fieldset{
   //moving the paragraphs down so that its inlne with the picture//
   p{
     margin-top: 17%;
+  }
 }
-}
-
+//making the dropdown box sticky//
 .dropdown{
   text-align: left;
   position: sticky;
   top: 6%;
   left: 5%;
+  //styling the dropdown box//
   select{
     background-color: black;
     padding: 10px;
     border-radius: 12px;
     color: white;
     font-size: 20px;
-
-
   }
 }
-  img{
-      width: 250px;
-      height: 150px;
-      border-radius: 12px;
-      border: solid 2px black;
+  //styling the images//
+img{
+  width: 250px;
+  height: 150px;
+  border-radius: 12px;
+  border: solid 2px black;
 }
 
 //editting the main header//
@@ -143,21 +151,24 @@ a{
   color: black;
   font-size: 30px;
   text-decoration: none;
-
 }
+
 //Using the mixin links//
 li{
   @include links;
 }
+
 //changing the background color if you hover over the links//
 li:hover{
   background-color: $fifthColor;
 }
+
 //using the mixin paragraph//
 p{
   @include paragraph;
 }
 
+//styling the footer//
 footer{
   display: grid;
   grid-template-columns: 1fr;
@@ -168,57 +179,38 @@ footer{
   text-align: center;
 }
 
-/* Making it responsive for large desktops */
-@media screen and (max-width: 1600px) {
-
-}
-
-/* Making it responsive for the tablet */
-@media screen and (max-width: 960px) {
-body{
-  text-align: center;
-}
-header{
-  width: 100%;
-}
-#container{
-  display: grid;
-  grid-template-columns:1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  margin: 0 10% 0 10%;
-  img{
-    width:250px;
-    height: 150px;
-    border-radius: 12px;
-    margin-left: 8%;
-    border: solid 2px black;
-
+//Making it responsive for a tablet//
+@media screen and (max-width: 960px) and (min-width: 479px){
+  fieldset {
+    width: 100%;
   }
-}
-}
-
-/* Making it responsive for the smart phone */
- @media screen and (max-width: 480px) {
-   body{
-     text-align: center;
-   }
-   #container{
-     display: grid;
-     grid-template-columns: 1fr;
-     grid-template-rows: 485px 667px 809px 408px 468px 291px 309px 463px;
-
+  body{
+    text-align: center;
+  }
+  //changing the container//
+  #container{
+    display: grid;
+    grid-template-columns: 700px;
+    grid-template-rows: 580px 501px 564px 497px 636px 289px 257px 559px;
+    //changing image sizes in the container//
     img{
-      width: 300px;
-      height: 250px;
+      width: 400px;
+      height: 350px;
+      margin-left: 22%;
     }
+    //changing the paragraph size//
     p{
+      font-size: 20px;
       margin-top: 0;
     }
+    //adding a space on top of all paragraphs//
     article{
       padding-top: 10%;
     }
+    //changing the h3 sizes//
     h3{
-      color: white;
+     color: white;
+     font-size: 50px;
     }
   }
   section{
@@ -226,6 +218,7 @@ header{
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     text-align: center;
+
     //editting the heading of each picture//
     h2{
       font-size: 30px;
@@ -233,22 +226,93 @@ header{
     }
     //editting the four images in the section//
     img{
-        width: 250px;
-        height: 150px;
-        border-radius: 12px;
-        border: solid 2px black;
+      width: 250px;
+      height: 150px;
+      border-radius: 12px;
+      border: solid 2px black;
+    }
   }
-  }
-li{
+  //changing the display of links
+  li{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     width: 200px;
     height: 30px;
-    margin-left: 15%;
+    margin-left: 34%;
   }
-
+  //changing heading 1 size//
   h1{
-    font-size: 50px;
+    font-size: 80px;
   }
+  //changing heading 2 size//
+  h2{
+    font-size: 72px;
+  }
+  //changing dropbox size//
+  select{
+    font-size: 20px;
+    width: 200px;
+    margin-left: 1%;
+  }
+}
+/* Making it responsive for the smart phone */
+ @media screen and (max-width: 480px) {
+    body{
+      text-align: center;
+    }
+    //editting the container//
+    #container{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 485px 667px 809px 408px 468px 291px 309px 463px;
+      //changing the image sizes//
+      img{
+        width: 300px;
+        height: 250px;
+      }
+      p{
+        margin-top: 0;
+      }
+      //adding a space on top of the paragraphs//
+      article{
+        padding-top: 10%;
+      }
+      //changing heading 3 colours//
+      h3{
+        color: white;
+      }
+    }
+    //editting the grid//
+    section{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      text-align: center;
+      //editting the heading of each picture//
+      h2{
+        font-size: 30px;
+        color: white;
+      }
+      //editting the four images in the section//
+      img{
+        width: 250px;
+        height: 150px;
+        border-radius: 12px;
+        border: solid 2px black;
+      }
+    }
+    //changing display of links
+    li{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      width: 200px;
+      height: 30px;
+      margin-left: 15%;
+    }
+    //changing heading 1 size//
+    h1{
+      font-size: 50px;
+    }
 }
