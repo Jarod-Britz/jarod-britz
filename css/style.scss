@@ -82,7 +82,7 @@ fieldset{
     height: 400px;
     border-radius: 20%;
     border: solid 2px black;
-
+    margin-left: 17%;
   }
   //adding a grid to the picture and heading in the contrainer//
   section{
@@ -97,7 +97,7 @@ fieldset{
     border: solid 2px black;
     border-radius: 10%;
     background-color: $firstColor;
-    padding-top: 10%;
+    padding-top: 8%;
   }
   //making the heading font bigger//
   h3{
@@ -162,16 +162,16 @@ p{
 }
 
 //styling the footer//
-footer{
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  background-color: #5BBA6F;
-  border-radius: 12px;
-  border: solid 2px black;
-  text-align: center;
-  width: 100%;
-}
+  footer{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    background-color: #5BBA6F;
+    border-radius: 12px;
+    border: solid 2px black;
+    text-align: center;
+  }
+
 .top{
   background-color: $secondColor;
   border-radius: 12px;

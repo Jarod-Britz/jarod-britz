@@ -5,14 +5,16 @@
     <title>Gallery</title>
     <link rel="stylesheet" href="css/gallery.css">
     <link href="https://fonts.googleapis.com/css?family=Teko:500" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/style.js"></script>
     <link async href="http://fonts.googleapis.com/css?family=Aladin" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
 
-      <fieldset class="inset-text-effect">
-        <h1>OUTDOOR ADVENTURES</h1>
-      </fieldset>
+      <header class="text_effect">
+        <h1 id="top">OUTDOOR ADVENTURES</h1>
+      </header>
 
     <div id="container">
       <ul>
@@ -21,43 +23,53 @@
         <li><a href="contact.html">CONTACT</a></li>
       </ul>
 
-      <h1>HIKING</h1>
-      <section class="">
-        <img src="images/hiking/hiking1.jpg" alt="">
-        <img src="images/hiking/hiking2.jpg" alt="">
-        <img src="images/hiking/hiking3.jpg" alt="">
-        <img src="images/hiking/hiking4.jpg" alt="">
-        <img src="images/hiking/hiking5.jpg" alt="">
+      <select>
+        <option><a href="#"></a>PLEASE SELECT...</a></option>
+        <option><a href="#h">HIKING</a></option>
+        <option><a href="#rc">ROCK CLIMBING</a></option>
+        <option><a href="#c">CAMPING</a></option>
+        <option><a href="#f">FISHING</a></option>
+      </select>
+
+      <h1 id="h">HIKING</h1>
+      <section>
+        <img src="images/hiking/hiking1.jpg" alt="hiking">
+        <img src="images/hiking/hiking2.jpg" alt="hiking">
+        <img src="images/hiking/hiking3.jpg" alt="hiking">
+        <img src="images/hiking/hiking4.jpg" alt="hiking">
+        <img src="images/hiking/hiking5.jpg" alt="hiking">
       </section>
 
-      <h1>ROCK CLIMBING</h1>
-      <section class="section1">
-        <img src="images/rock_climbing/rockclimbing1.jpg" alt="">
-        <img src="images/rock_climbing/rockclimbing2.jpg" alt="">
-        <img src="images/rock_climbing/rockclimbing3.jpg" alt="">
-        <img src="images/rock_climbing/rockclimbing4.jpg" alt="">
-        <img src="images/rock_climbing/rockclimbing5.jpg" alt="">
+      <h1 id="rc">ROCK CLIMBING</h1>
+      <section>
+        <img src="images/rock_climbing/rockclimbing1.jpg" alt="rock climbing">
+        <img src="images/rock_climbing/rockclimbing2.jpg" alt="rock climbing">
+        <img src="images/rock_climbing/rockclimbing3.jpg" alt="rock climbing">
+        <img src="images/rock_climbing/rockclimbing4.jpg" alt="rock climbing">
+        <img src="images/rock_climbing/rockclimbing5.jpg" alt="rock climbing">
       </section>
 
-      <h1>CAMPING</h1>
-      <section class="section1">
-        <img src="images/camping/camping1.jpg" alt="">
-        <img src="images/camping/camping2.jpg" alt="">
-        <img src="images/camping/camping3.jpg" alt="">
-        <img src="images/camping/camping4.jpg" alt="">
-        <img src="images/camping/camping5.jpg" alt="">
+      <h1 id="c">CAMPING</h1>
+      <section>
+        <img src="images/camping/camping1.jpg" alt="camping">
+        <img src="images/camping/camping2.jpg" alt="camping">
+        <img src="images/camping/camping3.jpg" alt="camping">
+        <img src="images/camping/camping4.jpg" alt="camping">
+        <img src="images/camping/camping5.jpg" alt="camping">
       </section>
 
-      <h1>FISHING</h1>
-      <section class="section1">
-        <img src="images/fishing/fishing1.jpg" alt="">
-        <img src="images/fishing/fishing2.jpg" alt="">
-        <img src="images/fishing/fishing3.jpg" alt="">
-        <img src="images/fishing/fishing4.jpg" alt="">
-        <img src="images/fishing/fishing5.jpg" alt="">
+      <h1 id="f">FISHING</h1>
+      <section>
+        <img src="images/fishing/fishing1.jpg" alt="fishing">
+        <img src="images/fishing/fishing2.jpg" alt="fishing">
+        <img src="images/fishing/fishing3.jpg" alt="fishing">
+        <img src="images/fishing/fishing4.jpg" alt="fishing">
+        <img src="images/fishing/fishing5.jpg" alt="fishing">
       </section>
     </div>
-    <br><br>
+    <br>
+    <a href="#top"><li class="top">TOP</li></a>
+    <br>
     <footer>
       <p>By Jarod Britz</p>
     </footer>

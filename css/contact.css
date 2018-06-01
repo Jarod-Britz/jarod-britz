@@ -14,42 +14,49 @@
 
 #container {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 70px 160px 145px 145px 167px 101px 265px 150px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   text-align: center; }
-  #container h1 {
-    color: black; }
-  #container label {
-    font-size: 40px;
-    padding: 20px;
-    margin-top: 10px; }
-  #container input {
-    width: 330px;
-    height: 50px;
-    font-size: 20px;
-    margin-top: 20px;
-    border-radius: 12px;
-    color: black;
-    background-color: #5BBA6F;
-    border: solid 2px #5BBA6F; }
-  #container select {
-    width: 300px;
-    height: 50px;
-    font-size: 20px;
-    border-radius: 12px;
-    background-color: #5BBA6F;
-    border: solid 2px #5BBA6F; }
-  #container textarea {
-    font-size: 20px;
-    border-radius: 12px;
-    background-color: #5BBA6F;
-    border: solid 2px #5BBA6F; }
-  #container button {
-    width: 150px;
-    height: 50px;
-    font-size: 20px;
-    background-color: #054A29;
-    border-radius: 12px; }
+
+h1 {
+  color: black; }
+
+label {
+  font-size: 40px;
+  padding: 20px;
+  margin-top: 10px; }
+
+input {
+  width: 330px;
+  height: 50px;
+  font-size: 20px;
+  margin-top: 20px;
+  border-radius: 12px;
+  color: black;
+  background-color: #5BBA6F;
+  border: solid 2px #5BBA6F; }
+
+select {
+  width: 300px;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 12px;
+  background-color: #5BBA6F;
+  border: solid 2px #5BBA6F;
+  margin-top: 9%; }
+
+textarea {
+  font-size: 20px;
+  border-radius: 12px;
+  background-color: #5BBA6F;
+  border: solid 2px #5BBA6F; }
+
+button {
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+  background-color: #054A29;
+  border-radius: 12px; }
 
 body {
   background-image: url("background.jpg");
@@ -57,9 +64,11 @@ body {
   background-position: center 0;
   background-size: cover;
   background-attachment: fixed;
-  font-family: 'Teko', sans-serif; }
+  font-family: 'Teko', sans-serif;
+  text-align: center; }
 
-
+.input_dropbox_right {
+  float: right; }
 
 fieldset {
   border: solid 2px #054A29;
@@ -104,6 +113,16 @@ footer {
   border-radius: 12px;
   border: solid 2px black;
   text-align: center; }
+
+.top {
+  background-color: #3FA34D;
+  border-radius: 12px;
+  font-size: 30px;
+  color: black;
+  float: right;
+  position: sticky;
+  bottom: 3%;
+  right: 3%; }
 
 @media screen and (max-width: 960px) and (min-width: 479px) {
   fieldset {
@@ -154,7 +173,7 @@ footer {
       font-size: 20px;
       background-color: #054A29;
       border-radius: 12px; } }
-@media screen and (max-width: 480px) and (min-width: 1px) {
+@media screen and (max-width: 360px) and (min-width: 1px) {
   body {
     text-align: center; }
 
@@ -164,24 +183,42 @@ footer {
   #container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 268px 97px 176px 178px 219px 49px 177px 92px; }
+    grid-template-rows: 1fr 1fr 1fr 1fr; }
 
   li {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    width: 60px;
+    height: 10px;
+    vertical-align: middle;
+    padding-left: 0; }
+
+  a {
+    font-size: 20px; }
+
+  ul {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 1fr; }
+
+  input {
     width: 200px;
     height: 30px;
-    margin-left: 15%; }
+    font-size: 20px;
+    margin-top: 20px;
+    border-radius: 12px;
+    color: black;
+    background-color: #5BBA6F;
+    border: solid 2px #5BBA6F;
+    margin: 0 auto; }
 
-  input, select {
-    margin-left: 15%; }
+  select {
+    margin-left: 6%; }
 
   h1 {
     font-size: 50px; }
 
   button {
-    margin-left: 34%; }
+    margin-left: 27%; }
 
   label {
     color: white; }
@@ -189,6 +226,6 @@ footer {
   section {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px; } }
+    grid-template-rows: 50px 50px; } }
 
 /*# sourceMappingURL=contact.css.map */

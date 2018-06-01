@@ -10,11 +10,11 @@
   </head>
   <body>
     <form>
-    <fieldset class="inset-text-effect">
+    <header class="inset-text-effect">
       <h1>OUTDOOR ADVENTURES</h1>
-    </fieldset>
+    </header>
 
-    <div id="container">
+    
       <ul>
         <li><a href="index.html">HOME</a></li>
         <li><a href="gallery.html">GALLERY</a></li>
@@ -23,13 +23,16 @@
 
 
       <h1>Contact</h1>
+      <div id="container">
       <section>
         <label for="name">Name*</label>
         <br>
         <input id="name" type="text" name="" placeholder="Enter name..." value="" required title="Required and alphabets only.">
       </section>
 
-      <section>
+      
+      
+      <section>  
         <label for="surname">Surname*</label>
         <br>
         <input id="surname" type="text" name="" placeholder="Enter surname..." value="" required title="Required and alphabets only.">
@@ -41,7 +44,9 @@
         <input id="email" type="email" name="" placeholder="Enter email..." value="" required title="Required. Must be a valid email">
       </section>
 
-      <section>
+      
+      
+      <section>  
         <select class="" name="">
           <option value="">Select one...</option>
           <option value="">Hiking</option>
@@ -51,6 +56,7 @@
           <option value="">Other</option>
         </select>
       </section>
+    </div>
 
       <section>
         <label for="">Message*</label>
@@ -58,11 +64,14 @@
         <textarea name="name" rows="8" cols="80"></textarea>
       </section>
 
+      <br><br>
+
       <section>
         <button type="submit" name="button" onclick="clickAlert()">Submit</button>
       </section>
-      </div>
-
+      
+      <br>
+      <br>
 
 
       <footer>
@@ -71,7 +80,7 @@
         <p>Facebook: <a href="#"> Outdoor Adventures</a></p>
 
       </footer>
-      <script type="text/javascript">
+      <!-- <script type="text/javascript">
       var name=document.getElementById("name");
       var surname=document.getElementById("surname");
       var surname=document.getElementById("email");
@@ -86,7 +95,7 @@
       }
       }
 
-      </script>
+      </script> -->
     </form>
     </body>
 </html>

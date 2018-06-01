@@ -39,9 +39,9 @@ $fifthColor : #054A29;//Dark green//
 //container for the form//
 #container{
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 70px 160px 145px 145px 167px 101px 265px 150px;
-  text-align: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  text-align: center;}
   //Making the headings in black//
   h1{
     color: black;
@@ -71,12 +71,14 @@ $fifthColor : #054A29;//Dark green//
     border-radius: 12px;
     background-color: $firstColor;
     border: solid 2px $firstColor;
+    margin-top: 9%;
   }//styling the textarea//
   textarea{
     font-size: 20px;
     border-radius: 12px;
     background-color: $firstColor;
     border: solid 2px $firstColor;
+
   }
   //styling the button//
   button{
@@ -86,7 +88,7 @@ $fifthColor : #054A29;//Dark green//
     background-color: $fifthColor;
     border-radius: 12px;
   }
-}
+
   //Adding the background image//
 body {
   background-image: url("background.jpg");
@@ -95,8 +97,11 @@ body {
   background-size: cover;
   background-attachment: fixed;
   font-family: 'Teko', sans-serif;
+  text-align: center;
 }
-
+.input_dropbox_right{
+  float: right;
+}
 
 //styling the fieldset//
 fieldset{
@@ -139,6 +144,15 @@ footer{
   border: solid 2px black;
   text-align: center;
 }
+.top {
+  background-color: #3FA34D;
+  border-radius: 12px;
+  font-size: 30px;
+  color: black;
+  float: right;
+  position: sticky;
+  bottom: 3%;
+  right: 3%; }
 
 //making it responsive for tablets//
 @media screen and (max-width: 960px) and (min-width:479px){
@@ -209,7 +223,7 @@ footer{
   }
 }
 //making it responsive for smart phones//
-@media screen and (max-width: 480px) and (min-width:1px){
+@media screen and (max-width: 360px) and (min-width:1px){
   body{
     text-align: center;
   }
@@ -221,20 +235,40 @@ footer{
   #container{
     display: grid;
     grid-template-columns:1fr;
-    grid-template-rows: 268px 97px 176px 178px 219px 49px 177px 92px;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
   }
-  //changing displays of links//
+  //changing display of links
   li{
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    width: 200px;
-    height: 30px;
-    margin-left: 15%;
+    width: 60px;
+    height: 10px;
+    vertical-align: middle;
+    padding-left: 0;
+  }
+  a{
+    font-size: 20px;
+  }
+  ul{
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 1fr;
+
   }
   //aligning it so that its in the center//
-  input,select{
-    margin-left: 15%;
+  input{
+    width: 200px;
+    height: 30px;
+    font-size: 20px;
+    margin-top: 20px;
+    border-radius: 12px;
+    color: black;
+    background-color: $firstColor;
+    border: solid 2px $firstColor;
+    margin: 0 auto;
+  }
+  select{
+    margin-left: 6%;
   }
   //changing the top heading//
   h1{
@@ -242,16 +276,17 @@ footer{
   }
   //moving the button the middle//
   button{
-    margin-left: 34%;
+    margin-left: 27%;
   }
   //changing the label colour//
   label{
     color: white;
   }
 
+
   section{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px;
+    grid-template-rows: 50px 50px;
   }
 }
