@@ -114,7 +114,8 @@ footer {
   background-color: #5BBA6F;
   border-radius: 12px;
   border: solid 2px black;
-  text-align: center; }
+  text-align: center;
+  width: 100%; }
 
 .top {
   background-color: #3FA34D;
