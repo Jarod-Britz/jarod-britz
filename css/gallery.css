@@ -15,22 +15,9 @@
 #container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 200px 50px 1fr 1fr 1fr 1fr 1fr 1fr; }
+  grid-template-rows: auto auto auto auto auto auto auto auto; }
   #container h1 {
     color: black; }
-
-select {
-  width: 200px;
-  height: 50px;
-  text-align: center;
-  border-radius: 12px;
-  background-color: black;
-  color: white;
-  position: sticky;
-  top: 1%;
-  left: 1%; }
-  select option {
-    text-align: center; }
 
 body {
   background-image: url("background.jpg");
@@ -101,29 +88,32 @@ footer {
   color: black;
   float: right;
   position: sticky;
-  bottom: 3%;
-  right: 3%; }
+  bottom: 1%;
+  right: 1%; }
 
-@media screen and (max-width: 960px) and (min-width: 479px) {
+@media screen and (max-width: 960px) and (min-width: 359px) {
   fieldset {
     width: 100%; }
 
   #container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 219px 220px 426px 220px 426px 220px 426px 220px; }
+    grid-template-rows: auto auto auto auto auto auto auto auto; }
     #container h1 {
       text-align: center;
       color: black;
-      font-size: 80px; }
+      font-size: 100px; }
 
   li {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    width: 200px;
+    width: 100px;
     height: 30px;
-    margin-left: 39%; }
+    margin: 0 auto; }
+
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr; }
 
   section {
     display: grid;
@@ -135,10 +125,20 @@ footer {
       height: 150px;
       border-radius: 12px;
       border: solid 2px black;
-      margin-left: 30%; }
+      margin: 0 auto; }
 
   footer {
-    width: 110%; } }
+    width: 100%; }
+    footer p{
+      font-size: 20px;
+    }
+
+  .top {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    right: 1%;
+    bottom: 1%; } }
 @media screen and (max-width: 360px) and (min-width: 1px) {
   fieldset {
     width: 79%; }
@@ -181,6 +181,15 @@ footer {
   ul {
     display: grid;
     grid-template-columns: 100px 100px 100px;
-    grid-template-rows: 1fr; } }
+    grid-template-rows: 1fr; }
+    .top{
+      width: 30px;
+      height: 30px;
+      font-size: 20px;
+      right: 1%;
+      bottom: 1%;}
+
+  footer {
+    width: 100%; } }
 
 /*# sourceMappingURL=gallery.css.map */

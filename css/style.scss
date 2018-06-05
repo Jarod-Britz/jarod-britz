@@ -185,7 +185,7 @@ p{
 }
 
 //Making it responsive for a tablet//
-@media screen and (max-width: 960px) and (min-width: 479px){
+@media screen and (max-width: 960px) and (min-width: 359px){
   body{
     text-align: center;
   }
@@ -193,6 +193,12 @@ p{
     width: 100%;
   }
   body{
+    text-align: center;
+  }
+  .four_images{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     text-align: center;
   }
   //changing the container//
@@ -210,10 +216,12 @@ p{
     p{
       font-size: 20px;
       margin-top: 0;
+      text-align: left;
     }
     //adding a space on top of all paragraphs//
     article{
       padding-top: 10%;
+      
     }
     //changing the h3 sizes//
     h3{
@@ -243,24 +251,36 @@ p{
   //changing the display of links
   li{
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    width: 350px;
+    width: 100px;
     height: 30px;
-    margin-left: 34%;
+    margin: 0 auto;
+  }
+  ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
   }
   //changing heading 1 size//
   h1{
-    font-size: 80px;
+    font-size: 100px;
   }
   //changing heading 2 size//
   h2{
     font-size: 72px;
   }
-  
+  .top{
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    right: 1%;
+    bottom: 1%;
+  }
+  footer{
+    width: 100%;
+  }
 }
 /* Making it responsive for the smart phone */
- @media screen and (max-width: 360px) {
+ @media screen and (max-width: 360px) and(min-width: 1px) {
     body{
       margin: 0;
     }
@@ -276,13 +296,13 @@ p{
     #container{
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: 437px 811px 990px 399px 434px 378px 393px 453px 0px;
+      grid-template-rows: 459px 380px 674px 418px 470px 378px 371px 453px 0px;
       
       //changing the image sizes//
       img{
         width: 250px;
         height: 250px;
-        margin-left: 15%;
+        margin: 0 auto;
       }
       p{
         margin-top: 0;
@@ -292,7 +312,7 @@ p{
       article{
         padding-top: 10%;
         width: 90%;
-        margin-left: 5%;
+        margin: 0 auto;
       }
       //changing heading 3 colours//
       h3{
@@ -336,6 +356,7 @@ p{
     }
     a{
       font-size: 20px;
+      margin: 0 auto;
     }
     ul{
       display: grid;
@@ -351,8 +372,10 @@ p{
       width: 30px;
       height: 30px;
       font-size: 20px;
-      right: 3%;
-      bottom: 3%;
-      
+      right: 1%;
+      bottom: 1%;
+    }
+    footer{
+      width: 100%;
     }
 }
