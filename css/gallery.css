@@ -129,9 +129,8 @@ footer {
 
   footer {
     width: 100%; }
-    footer p{
-      font-size: 20px;
-    }
+    footer p {
+      font-size: 20px; }
 
   .top {
     width: 30px;
@@ -182,12 +181,13 @@ footer {
     display: grid;
     grid-template-columns: 100px 100px 100px;
     grid-template-rows: 1fr; }
-    .top{
-      width: 30px;
-      height: 30px;
-      font-size: 20px;
-      right: 1%;
-      bottom: 1%;}
+
+  .top {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    right: 1%;
+    bottom: 1%; }
 
   footer {
     width: 100%; } }
